@@ -185,9 +185,9 @@ nav ul.menu li a:hover {
 }
 
 .project-image {
-  background-image: url('art_deco_pattern.jpg');
+  background-image: url("ChatGPT Image Aug 18, 2025, 05_11_06 PM.png");
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   height: 200px;
   flex-shrink: 0;
 }
