@@ -116,6 +116,19 @@ nav ul.menu li a:hover {
   color: #dcdcdc;
 }
 
+    /* Current projects blurb */
+    .hero-content .current-projects {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #dcdcdc;
+    }
+
+    .hero-content .current-projects a {
+      color: #c5a253;
+      text-decoration: underline;
+    }
+
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
