@@ -58,10 +58,11 @@ nav .logo {
 
 nav ul.menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+    flex-wrap: wrap;
 }
 
-nav ul.menu li a {
+nav ul.menu li a 
   color: #f4f3ef;
   font-size: 0.9rem;
   transition: color 0.3s ease;
