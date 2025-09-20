@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Upgrade insecure requests for mixed content safety -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <title>GCRE Lead Capture | EliteOffMarket</title>
+    <!-- Reuse the main site stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Inline styling for the lead capture form -->
+    <style>
+      /* Form container styling */
+      .cta {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        background-color: #16191d;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .cta h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .lead-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      .lead-form input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+      .thank-you {
+        display: none;
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        color: #c5a253;
+      }
+      .thank-you a {
+        color: #c5a253;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header reused from main site for consistency -->
+    <header id="hero">
+      <nav>
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">EliteOffMarket</a></div>
+        <ul class="menu">
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h1>Get Your Free Fix &amp; Flip Guide</h1>
+        <p>Enter your email and phone number to receive our exclusive fix &amp; flip guide.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="cta section">
+        <h2>Unlock Your Guide</h2>
+        <form id="lead-form" class="lead-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required />
+          <button type="submit" class="button primary">Submit</button>
+        </form>
+        <p id="thank-you" class="thank-you">
+          Thank you! Your guide is ready. <a href="The%20Ultimate%20Fix%20%26%20Flip%20Guide%20(1).pdf" download>Click here to download your guide.</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- Simple script to display the thank-you message and guide link -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('lead-form');
+        const thankYou = document.getElementById('thank-you');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          if (!email || !phone) {
+            alert('Please enter both email and phone number.');
+            return;
+          }
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+        });
+      });
+    </script>
+  </body>
+</html>
